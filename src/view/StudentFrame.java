@@ -58,6 +58,7 @@ public class StudentFrame extends JFrame {
 
         JButton btnNewButton = new JButton("个人信息");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     studentInfo(e);
@@ -72,6 +73,7 @@ public class StudentFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("成绩查询");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 findGrade(e);
             }
@@ -82,6 +84,7 @@ public class StudentFrame extends JFrame {
 
         JButton btnNewButton_1_1 = new JButton("修改密码");
         btnNewButton_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 revisePassword(e);
             }
@@ -92,6 +95,7 @@ public class StudentFrame extends JFrame {
 
         JButton btnNewButton_1_2 = new JButton("退出系统");
         btnNewButton_1_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }
@@ -102,6 +106,7 @@ public class StudentFrame extends JFrame {
 
         JButton btnNewButton_1_2_1 = new JButton("选课");
         btnNewButton_1_2_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent ae) {
                 chooseCourse(ae);
             }

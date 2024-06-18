@@ -29,7 +29,9 @@ public class AdminDao extends BaseDao{
         }
         return admin;
     }
-    //管理员修改密码
+    /**
+     * 管理员修改密码
+     */
     public String revisePassword(String name,String newPassword){
         String resultStr = "操作失败";
         String sqlStr = "update adminLogin set password = ? where name = ? and password = ?";

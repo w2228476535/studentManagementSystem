@@ -24,6 +24,7 @@ public class SetStudentGradeFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     SetStudentGradeFrame frame = new SetStudentGradeFrame();
@@ -74,6 +75,7 @@ public class SetStudentGradeFrame extends JFrame {
 
         JButton btnNewButton = new JButton("录入");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     setStudentGrade(e);
@@ -88,6 +90,7 @@ public class SetStudentGradeFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -99,6 +102,7 @@ public class SetStudentGradeFrame extends JFrame {
 
         JButton btnNewButton_1_1 = new JButton("退出");
         btnNewButton_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

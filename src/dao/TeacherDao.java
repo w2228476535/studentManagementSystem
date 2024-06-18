@@ -100,7 +100,6 @@ public class TeacherDao extends BaseDao{
             resultStr = resultSet.getString("grade");
         }
         System.out.println(stuName+" "+courseName);
-        //System.out.println(resultStr);
         return resultStr;
     }
 

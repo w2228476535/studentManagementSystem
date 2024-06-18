@@ -27,6 +27,7 @@ public class RevisePassword extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     RevisePassword frame = new RevisePassword();
@@ -92,6 +93,7 @@ public class RevisePassword extends JFrame {
 
         JButton btnNewButton = new JButton("确认修改");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 confirmButton(e);
             }
@@ -101,6 +103,7 @@ public class RevisePassword extends JFrame {
 
         JButton btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }

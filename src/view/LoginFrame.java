@@ -31,7 +31,9 @@ public class LoginFrame extends JFrame {
      * Launch the application.
      */
     public static void main(String[] args) {
+        //调用后会被销毁
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     LoginFrame frame = new LoginFrame();
@@ -91,6 +93,7 @@ public class LoginFrame extends JFrame {
 
         JButton btnNewButton = new JButton("重置");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -100,6 +103,7 @@ public class LoginFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("登录");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 confirmLoginButton(e);
             }
@@ -107,7 +111,10 @@ public class LoginFrame extends JFrame {
         btnNewButton_1.setBounds(101, 230, 97, 23);
         contentPane.add(btnNewButton_1);
     }
-    //确认登陆按钮
+
+    /**
+     * 确认登陆按钮
+     */
     protected void confirmLoginButton(ActionEvent e) {
         // TODO 自动生成的方法存根
         String name = this.adminName.getText();
@@ -116,13 +123,14 @@ public class LoginFrame extends JFrame {
         if("系统管理员".equals(userType.getName())){
             AdminDao adminDao = new AdminDao();
             Admin admin = adminDao.selectAdmin(name,password);
-//            System.out.println(admin);
             if(admin==null){
                 JOptionPane.showMessageDialog(this,"用户名或密码错误！");
             }else{
                 JOptionPane.showMessageDialog(this,"登陆成功！");
                 IndexFrame indexFrame = new IndexFrame(userType,admin);
+                // 管理员界面显示
                 indexFrame.setVisible(true);
+                // 登录页面关闭
                 this.dispose();
             }
         }
@@ -151,7 +159,9 @@ public class LoginFrame extends JFrame {
             }
         }
     }
-//    重置按钮，conbobox的默认是系统管理员
+/**
+ * 重置按钮，conbobox的默认是系统管理员
+ */
     private void resetButton(ActionEvent e) {
         this.adminName.setText("");
         this.adminPassword.setText("");

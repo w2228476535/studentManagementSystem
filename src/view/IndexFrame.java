@@ -32,8 +32,8 @@ public class IndexFrame extends JFrame {
 
     /**
      * Create the frame.
+     * 管理员登陆后的界面
      */
-    //管理员登陆后的界面
     public IndexFrame(UserType u,Admin a) {
         userType = u;
         admin = a;
@@ -50,6 +50,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem = new JMenuItem("修改密码");
         mntmNewMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 revisePassword(e);
             }
@@ -59,8 +60,8 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_1 = new JMenuItem("退出系统");
         mntmNewMenuItem_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-//                System.exit(0);
                 exitButton(e);
             }
         });
@@ -73,6 +74,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_2 = new JMenuItem("增加教师");
         mntmNewMenuItem_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 addNewTeacher(e);
             }
@@ -86,6 +88,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_1_1_1 = new JMenuItem("修改教师");
         mntmNewMenuItem_1_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 reviseTeacher(e);
             }
@@ -95,6 +98,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_1_1_2 = new JMenuItem("查询教师");
         mntmNewMenuItem_1_1_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 findTeacher(e);
             }
@@ -108,6 +112,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_3 = new JMenuItem("增加学生");
         mntmNewMenuItem_3.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 addNewStu(e);
             }
@@ -117,11 +122,13 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_1_2 = new JMenuItem("删除学生");
         mntmNewMenuItem_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 deleteTeacher(e);
             }
         });
         mntmNewMenuItem_1_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 deleteStu(e);
             }
@@ -131,6 +138,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_1_2_1 = new JMenuItem("修改学生");
         mntmNewMenuItem_1_2_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 changeStuInfo(e);
             }
@@ -140,6 +148,7 @@ public class IndexFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_1_2_2 = new JMenuItem("查询学生");
         mntmNewMenuItem_1_2_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 findStuInfo(e);
             }

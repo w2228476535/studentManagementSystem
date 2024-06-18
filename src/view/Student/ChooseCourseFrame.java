@@ -27,6 +27,7 @@ public class ChooseCourseFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     ChooseCourseFrame frame = new ChooseCourseFrame();
@@ -74,6 +75,7 @@ public class ChooseCourseFrame extends JFrame {
 
         btnNewButton = new JButton("选课");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     chooseCourse(e);
@@ -88,6 +90,7 @@ public class ChooseCourseFrame extends JFrame {
 
         btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -98,6 +101,7 @@ public class ChooseCourseFrame extends JFrame {
 
         btnNewButton_2 = new JButton("退出选课");
         btnNewButton_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

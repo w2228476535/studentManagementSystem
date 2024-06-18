@@ -1,5 +1,5 @@
 package model;
-//枚举类，，用户类型
+//枚举类用户类型
 public enum UserType {
     ADMIN("系统管理员",0),
     STUDENT("学生",1),
@@ -22,6 +22,7 @@ public enum UserType {
     public void setIndex(int index) {
         this.index = index;
     }
+    @Override
     public String toString(){
         return name;
     }

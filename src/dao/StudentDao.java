@@ -17,7 +17,6 @@ public class StudentDao extends BaseDao{
     //LoginFrame登陆界面的筛选身份
     public Student selectStudent(String name, String password){
         String sqlStr = "select * from studentLogin where name = ? and password = ?";
-//        String sqlStr = "select * from student where name = ? and password = ?";
         Student student = null;
         try{
             this.pStatement = this.con.prepareStatement(sqlStr);
@@ -39,7 +38,6 @@ public class StudentDao extends BaseDao{
     public String revisePassword(String name,String newPassword){
         String resultStr = "操作失败";
         String sqlStr = "update studentLogin set password = ? where name = ? and password = ?";
-        //String sqlStr = "update student set password = ? where name = ? and password = ?";
         try{
             this.pStatement = this.con.prepareStatement(sqlStr);
             this.pStatement.setString(1,newPassword);
@@ -110,9 +108,6 @@ public class StudentDao extends BaseDao{
         return resultStr;
     }
 
-//    public void findStuInfo(String name){
-//        String sqlStr = ""
-//    }
 
     public String reviseStuInfo(String ChangeWho,String StuSex,int StuAge,String StuDept,String StuPassword) throws SQLException {
         String resultStr = "修改失败！";
@@ -146,7 +141,6 @@ public class StudentDao extends BaseDao{
         String sqlStr = "select id from student where name = ? ";
         PreparedStatement preparedStatement = this.con.prepareStatement(sqlStr);
         preparedStatement.setString(1,name);
-//        preparedStatement.setString(2,student.getPassword());
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()){
             resultStr = resultSet.getString("id");
@@ -217,10 +211,6 @@ public class StudentDao extends BaseDao{
         preparedStatement.setString(2,stuName);
         preparedStatement.setString(3,courseID);
         preparedStatement.setString(4,courseName);
-//        ResultSet resultSet = preparedStatement.executeQuery();
-//        while(resultSet.next()){
-//            resultStr = "选课成功";
-//        }
         if(preparedStatement.executeUpdate()>=1){
             resultStr = "选课成功";
         }

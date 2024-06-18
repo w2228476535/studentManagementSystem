@@ -28,6 +28,7 @@ public class FindGradeFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     FindGradeFrame frame = new FindGradeFrame();
@@ -79,6 +80,7 @@ public class FindGradeFrame extends JFrame {
 
         JButton btnNewButton = new JButton("查询");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     findCourse(e);
@@ -92,6 +94,7 @@ public class FindGradeFrame extends JFrame {
 
         btnNewButton_1 = new JButton("关闭");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 CloseButton(e);
             }
@@ -101,6 +104,7 @@ public class FindGradeFrame extends JFrame {
 
         btnNewButton_2 = new JButton("重置");
         btnNewButton_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }

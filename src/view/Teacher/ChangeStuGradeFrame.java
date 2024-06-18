@@ -25,6 +25,7 @@ public class ChangeStuGradeFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     ChangeStuGradeFrame frame = new ChangeStuGradeFrame();
@@ -84,6 +85,7 @@ public class ChangeStuGradeFrame extends JFrame {
 
         JButton btnNewButton = new JButton("查询");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     findStuGrade(e);
@@ -98,6 +100,7 @@ public class ChangeStuGradeFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("修改");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     changeStuGrade(e);
@@ -112,6 +115,7 @@ public class ChangeStuGradeFrame extends JFrame {
 
         JButton btnNewButton_2 = new JButton("重置");
         btnNewButton_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -122,6 +126,7 @@ public class ChangeStuGradeFrame extends JFrame {
 
         JButton btnNewButton_2_1 = new JButton("退出");
         btnNewButton_2_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

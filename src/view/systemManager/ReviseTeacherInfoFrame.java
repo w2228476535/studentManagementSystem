@@ -25,6 +25,7 @@ public class ReviseTeacherInfoFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     ReviseTeacherInfoFrame frame = new ReviseTeacherInfoFrame();
@@ -96,6 +97,7 @@ public class ReviseTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton = new JButton("确认修改");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     confirmButton(e);
@@ -110,6 +112,7 @@ public class ReviseTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -120,6 +123,7 @@ public class ReviseTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton_1_1 = new JButton("退出");
         btnNewButton_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

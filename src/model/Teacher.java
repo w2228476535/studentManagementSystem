@@ -49,6 +49,7 @@ public class Teacher {
         this.TeachCourseName = TeachCourse;
     }
 
+    @Override
     public String toString(){
         return name+" "+password;
     }

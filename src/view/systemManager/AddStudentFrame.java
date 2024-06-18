@@ -29,6 +29,7 @@ public class AddStudentFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     AddStudentFrame frame = new AddStudentFrame();
@@ -77,6 +78,7 @@ public class AddStudentFrame extends JFrame {
 
         JButton btnNewButton = new JButton("确认新增");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 AddStuLogin(e);
             }
@@ -87,6 +89,7 @@ public class AddStudentFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -113,6 +116,7 @@ public class AddStudentFrame extends JFrame {
 
         JButton btnNewButton_1_1 = new JButton("退出");
         btnNewButton_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

@@ -25,6 +25,7 @@ public class FindCourseInfoFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     FindCourseInfoFrame frame = new FindCourseInfoFrame();
@@ -89,6 +90,7 @@ public class FindCourseInfoFrame extends JFrame {
 
         JButton btnNewButton = new JButton("关闭");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 closeButton(e);
             }

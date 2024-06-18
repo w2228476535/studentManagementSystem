@@ -29,6 +29,7 @@ public class FindTeacherInfoFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     FindTeacherInfoFrame frame = new FindTeacherInfoFrame();
@@ -84,6 +85,7 @@ public class FindTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton = new JButton("查询");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     find(e);
@@ -97,6 +99,7 @@ public class FindTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -106,6 +109,7 @@ public class FindTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton_1_1 = new JButton("退出");
         btnNewButton_1_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

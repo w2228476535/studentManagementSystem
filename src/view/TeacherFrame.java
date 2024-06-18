@@ -56,6 +56,7 @@ public class TeacherFrame extends JFrame {
 
         JButton btnNewButton = new JButton("录入成绩");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 setStuGrade(e);
             }
@@ -65,6 +66,7 @@ public class TeacherFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("查询成绩");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 findStuGrade(e);
             }
@@ -74,6 +76,7 @@ public class TeacherFrame extends JFrame {
 
         JButton btnNewButton_2 = new JButton("修改成绩");
         btnNewButton_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 changeStuGrade(e);
             }
@@ -83,6 +86,7 @@ public class TeacherFrame extends JFrame {
 
         JButton btnNewButton_2_1 = new JButton("查询授课信息");
         btnNewButton_2_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     findTeachInfo(e);
@@ -96,6 +100,7 @@ public class TeacherFrame extends JFrame {
 
         JButton btnNewButton_2_2 = new JButton("修改密码");
         btnNewButton_2_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 revisePassword(e);
             }
@@ -105,6 +110,7 @@ public class TeacherFrame extends JFrame {
 
         JButton btnNewButton_2_3 = new JButton("退出登录");
         btnNewButton_2_3.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }

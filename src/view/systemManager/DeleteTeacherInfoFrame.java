@@ -23,6 +23,7 @@ public class DeleteTeacherInfoFrame extends JFrame {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     DeleteTeacherInfoFrame frame = new DeleteTeacherInfoFrame();
@@ -75,6 +76,7 @@ public class DeleteTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton = new JButton("确认删除");
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     confirmButton(e);
@@ -89,6 +91,7 @@ public class DeleteTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton_1 = new JButton("重置");
         btnNewButton_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 resetButton(e);
             }
@@ -99,6 +102,7 @@ public class DeleteTeacherInfoFrame extends JFrame {
 
         JButton btnNewButton_2 = new JButton("退出");
         btnNewButton_2.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitButton(e);
             }
